@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project default="all" name="DataAccessService">
+    <target name="init">
+        <path id="slee">
+            <pathelement location="lib/slee.jar"/>
+        </path>
+        <taskdef classname="org.mobicents.eclipslee.ant.SbbJar"
+            classpath="lib/slee-tasks.jar" name="sbbjar"/>
+        <taskdef classname="org.mobicents.eclipslee.ant.EventJar"
+            classpath="lib/slee-tasks.jar" name="eventjar"/>
+        <taskdef classname="org.mobicents.eclipslee.ant.ProfileSpecJar"
+            classpath="lib/slee-tasks.jar" name="profilespecjar"/>
+        <taskdef classname="org.mobicents.eclipslee.ant.DeployableJar"
+            classpath="lib/slee-tasks.jar" name="deployablejar"/>
+        <taskdef
+            classname="org.mobicents.eclipslee.ant.ResourceAdaptorTypeJar"
+            classpath="lib/slee-tasks.jar" name="resourceadaptortypejar"/>
+        <taskdef
+            classname="org.mobicents.eclipslee.ant.ResourceAdaptorJar"
+            classpath="lib/slee-tasks.jar" name="resourceadaptorjar"/>
+        <path id="path-DataAccess-sbb">
+            <pathelement location="/home/julian/Telcomp-Workspace/DataAccessService/jars/endDataAccess-event.jar"/>
+            <pathelement location="/home/julian/Telcomp-Workspace/DataAccessService/jars/startDataAccess-event.jar"/>
+        </path>
+    </target>
+    <target depends="init" name="all">
+        <ant target="build-StartGetDataTelcoService-event"/>
+        <ant target="build-EndGetDataTelcoService-event"/>
+        <ant target="build-StartSetDataTelcoService-event"/>
+        <ant target="build-EndSetDataTelcoService-event"/>
+        <ant target="build-StartSearchDataTelcoService-event"/>
+        <ant target="build-EndSearchDataTelcoService-event"/>
+        <ant target="build-DataAccess-sbb"/>
+        <ant target="build-dataAccess-DU"/>
+    </target>
+    <target depends="init" name="clean">
+        <ant target="clean-StartGetDataTelcoService-event"/>
+        <ant target="clean-EndGetDataTelcoService-event"/>
+        <ant target="clean-StartSetDataTelcoService-event"/>
+        <ant target="clean-EndSetDataTelcoService-event"/>
+        <ant target="clean-StartSearchDataTelcoService-event"/>
+        <ant target="clean-EndSearchDataTelcoService-event"/>
+        <ant target="clean-DataAccess-sbb"/>
+        <ant target="clean-dataAccess-DU"/>
+    </target>
+    <target depends="init" name="build-StartGetDataTelcoService-event">
+        <mkdir dir="classes/StartGetDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/StartGetDataTelcoService-event"
+            includes="org/telcomp/events/StartGetDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/StartGetDataTelcoService-event"
+            destfile="jars/StartGetDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/StartGetDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-StartGetDataTelcoService-event">
+        <delete file="jars/StartGetDataTelcoService-event.jar"/>
+        <delete dir="classes/StartGetDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-EndGetDataTelcoService-event">
+        <mkdir dir="classes/EndGetDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/EndGetDataTelcoService-event"
+            includes="org/telcomp/events/EndGetDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/EndGetDataTelcoService-event"
+            destfile="jars/EndGetDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/EndGetDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-EndGetDataTelcoService-event">
+        <delete file="jars/EndGetDataTelcoService-event.jar"/>
+        <delete dir="classes/EndGetDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-StartSetDataTelcoService-event">
+        <mkdir dir="classes/StartSetDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/StartSetDataTelcoService-event"
+            includes="org/telcomp/events/StartSetDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/StartSetDataTelcoService-event"
+            destfile="jars/StartSetDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/StartSetDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-StartSetDataTelcoService-event">
+        <delete file="jars/StartSetDataTelcoService-event.jar"/>
+        <delete dir="classes/StartSetDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-EndSetDataTelcoService-event">
+        <mkdir dir="classes/EndSetDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/EndSetDataTelcoService-event"
+            includes="org/telcomp/events/EndSetDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/EndSetDataTelcoService-event"
+            destfile="jars/EndSetDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/EndSetDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-EndSetDataTelcoService-event">
+        <delete file="jars/EndSetDataTelcoService-event.jar"/>
+        <delete dir="classes/EndSetDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-StartSearchDataTelcoService-event">
+        <mkdir dir="classes/StartSearchDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/StartSearchDataTelcoService-event"
+            includes="org/telcomp/events/StartSearchDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/StartSearchDataTelcoService-event"
+            destfile="jars/StartSearchDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/StartSearchDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-StartSearchDataTelcoService-event">
+        <delete file="jars/StartSearchDataTelcoService-event.jar"/>
+        <delete dir="classes/StartSearchDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-EndSearchDataTelcoService-event">
+        <mkdir dir="classes/EndSearchDataTelcoService-event"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/EndSearchDataTelcoService-event"
+            includes="org/telcomp/events/EndSearchDataTelcoServiceEvent.java" srcdir="src">
+            <classpath>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <eventjar classpath="classes/EndSearchDataTelcoService-event"
+            destfile="jars/EndSearchDataTelcoService-event.jar" eventjarxml="src/org/telcomp/events/EndSearchDataTelcoService-event-jar.xml"/>
+    </target>
+    <target name="clean-EndSearchDataTelcoService-event">
+        <delete file="jars/EndSearchDataTelcoService-event.jar"/>
+        <delete dir="classes/EndSearchDataTelcoService-event"/>
+    </target>
+    <target depends="init" name="build-DataAccess-sbb">
+        <mkdir dir="classes/DataAccess-sbb"/>
+        <mkdir dir="jars/"/>
+        <javac destdir="classes/DataAccess-sbb"
+            includeantruntime="false"
+            includes="org/telcomp/sbb/DataAccessSbb.java,org/telcomp/others/UsersinfoDao.java,org/telcomp/others/Usersinfo.java,org/telcomp/others/NotFoundException.java,org/telcomp/others/UsersInfoManager.java" srcdir="src">
+            <classpath>
+                <path refid="path-DataAccess-sbb"/>
+                <path refid="slee"/>
+            </classpath>
+        </javac>
+        <copy file="src/org/telcomp/sbb/DataAccess-sbb-jar.xml" tofile="classes/DataAccess-sbb/sbb-jar.xml"/>
+        <jar basedir="classes/DataAccess-sbb"
+            destfile="jars/DataAccess-sbb.jar" includes="**/*.class">
+            <metainf dir="classes/DataAccess-sbb" includes="sbb-jar.xml"/>
+        </jar>
+    </target>
+    <target name="clean-DataAccess-sbb">
+        <delete file="jars/DataAccess-sbb.jar"/>
+        <delete dir="classes/DataAccess-sbb"/>
+    </target>
+    <target
+        depends="build-DataAccess-sbb,build-EndGetDataTelcoService-event,build-StartGetDataTelcoService-event,build-EndSetDataTelcoService-event,
+        build-StartSetDataTelcoService-event,build-EndSearchDataTelcoService-event,build-StartSearchDataTelcoService-event" name="build-dataAccess-DU">
+        <mkdir dir="classes/dataAccess-DU"/>
+        <copy
+            file="src/org/telcomp/service/dataAccess-deployable-unit.xml" tofile="classes/dataAccess-DU/deployable-unit.xml"/>
+        <jar jarfile="jars/dataAccess-DU.jar">
+            <metainf dir="classes/dataAccess-DU" includes="deployable-unit.xml"/>
+            <fileset dir="" includes="jars/DataAccess-sbb.jar"/>
+            <fileset dir="" includes="jars/EndGetDataTelcoService-event.jar"/>
+            <fileset dir="" includes="jars/StartGetDataTelcoService-event.jar"/>
+            <fileset dir="" includes="jars/EndSetDataTelcoService-event.jar"/>
+            <fileset dir="" includes="jars/StartSetDataTelcoService-event.jar"/>
+            <fileset dir="" includes="jars/EndSearchDataTelcoService-event.jar"/>
+            <fileset dir="" includes="jars/StartSearchDataTelcoService-event.jar"/>
+            <fileset dir="." includes="src/org/telcomp/service/dataAccess-service.xml"/>
+        </jar>
+    </target>
+    <target name="clean-dataAccess-DU">
+        <delete file="jars/dataAccess-DU.jar"/>
+        <delete dir="classes/dataAccess-DU"/>
+    </target>
+</project>
