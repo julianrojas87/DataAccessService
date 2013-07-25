@@ -5,7 +5,7 @@ import java.util.Random;
 import java.io.Serializable;
 
 public final class EndGetDataTelcoServiceEvent implements Serializable {
-
+	//Comment
 	private static final long serialVersionUID = 1L;
 	private String value;
 	private boolean commited;
