@@ -19,6 +19,11 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 
 	public void onStartSetDataTelcoServiceEvent(StartSetDataTelcoServiceEvent event, ActivityContextInterface aci) {
 		UsersInfoManager uManager = new UsersInfoManager();
+		System.out.println("*******************************************");
+		System.out.println("SetDataTelcoService Invoked");
+		System.out.println("Input Identification = "+event.getIdentification());
+		System.out.println("Input Parameter = "+event.getParameter());
+		System.out.println("Input Value = "+event.getValue());
 		
 		if(event.getParameter().equals("sipuri")){
 			String rsp = uManager.setSipuri(event.getIdentification(), event.getValue());
@@ -29,10 +34,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 			
 		}
@@ -46,10 +55,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -62,10 +75,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -78,10 +95,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -94,10 +115,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -110,10 +135,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -126,10 +155,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -142,10 +175,14 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "true");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "false");
 				EndSetDataTelcoServiceEvent EndEvent = new EndSetDataTelcoServiceEvent(output);
 				this.fireEndSetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			}
 		}
 		aci.detach(this.sbbContext.getSbbLocalObject());
@@ -154,6 +191,10 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 	public void onStartGetDataTelcoServiceEvent(StartGetDataTelcoServiceEvent event, ActivityContextInterface aci){
 		UsersInfoManager uManager = new UsersInfoManager();
 		String response = null;
+		System.out.println("*******************************************");
+		System.out.println("GetDataTelcoService Invoked");
+		System.out.println("Input Identification = "+event.getIdentification());
+		System.out.println("Input Parameter = "+event.getParameter());
 		
 		if(event.getParameter().equals("sipuri")){
 			response = uManager.getSipuri(event.getIdentification());
@@ -165,10 +206,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -182,10 +229,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -199,10 +252,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -216,10 +275,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -233,10 +298,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -250,10 +321,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -267,10 +344,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		
@@ -284,10 +367,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 				output.put("commited", (String) "false");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = false");
+				System.out.println("*******************************************");
 			} else {
 				output.put("commited", (String) "true");
 				EndGetDataTelcoServiceEvent EndEvent = new EndGetDataTelcoServiceEvent(output);
 				this.fireEndGetDataTelcoServiceEvent(EndEvent, aci, null);
+				System.out.println("Output Value = "+response);
+				System.out.println("Output Commited = true");
+				System.out.println("*******************************************");
 			}
 		}
 		aci.detach(this.sbbContext.getSbbLocalObject());
@@ -296,6 +385,10 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 	public void onStartSearchDataTelcoServiceEvent(StartSearchDataTelcoServiceEvent event, ActivityContextInterface aci){
 		UsersInfoManager uManager = new UsersInfoManager();
 		String response = null;
+		System.out.println("*******************************************");
+		System.out.println("SearchDataTelcoService Invoked");
+		System.out.println("Input Parameter = "+event.getParameter());
+		System.out.println("Input Value = "+event.getValue());
 		
 		response = uManager.searchID(event.getParameter(), event.getValue());
 		//Setting Output HashMap
@@ -306,10 +399,16 @@ public abstract class DataAccessSbb implements javax.slee.Sbb {
 			output.put("commited", (String) "false");
 			EndSearchDataTelcoServiceEvent EndEvent = new EndSearchDataTelcoServiceEvent(output);
 			this.fireEndSearchDataTelcoServiceEvent(EndEvent, aci, null);
+			System.out.println("Output Identification = "+response);
+			System.out.println("Output Commited = false");
+			System.out.println("*******************************************");
 		} else {
 			output.put("commited", (String) "true");
 			EndSearchDataTelcoServiceEvent EndEvent = new EndSearchDataTelcoServiceEvent(output);
 			this.fireEndSearchDataTelcoServiceEvent(EndEvent, aci, null);
+			System.out.println("Output Identification = "+response);
+			System.out.println("Output Commited = true");
+			System.out.println("*******************************************");
 		}
 		aci.detach(this.sbbContext.getSbbLocalObject());
 	}
